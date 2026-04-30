@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <title> platypus adventures .☘︎ ݁˖ </title>
+        
+        <meta name = "description" content="CS3 Website Project">
+        <meta name = "author" content = "Aga, Velasco">
+        <link rel="stylesheet" href="(h) journal.css">
+        <link rel="ïcon" href="/favicon.io" sizes="any">
+        <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/79/eb/02/79eb02b0a4f5b75ff7966f255c428df1.jpg">
+    
+    </head>
+    <body>
+        <img src="https://drive.google.com/thumbnail?id=1Dmqg-EJBHPm1fhI8YHtUOUZD6uWrKnu5" class="platypus">
+    <script src="extras.js"></script>
+    <img src="https://www.youtube.com/embed/EANksvavteY?autoplay=1&mute=1&loop=1&playlist=EANksvavteY" class="platypus">
+    <div class="navbar">
+        <ul>
+            <li><a href="(a) platypusadventures_k01k28.html"> home </a></li>
+            <li><a href="(g3) account-page.html"> profile-page</a></li>
+            <li><a href="(b) casefiles.html"> case files </a></li>
+            <li><a href="(c) abouttheseries.html"> about the series </a></li>
+            <li><a href="(d) minigames.html"> minigames </a></li>
+            <li><a href="(h) journal.html"> journal </a></li>
+            <li><a href="(e) aboutus.html"> about us </a></li>
+            <li><a href="(f) reference.html"> references </a></li>
+        </ul>
+    </div>
+
+    <div id="idkwhattoname">
+        <div class="notes">
+            <button id="addBtn" onclick="popUp()">➕ Add Item</button>
+            <div id="open"></div>
+            <div id="formContainer">
+                <h3 id="formTitle">Add Item</h3>
+                <form id="itemForm" method = "post">
+                    <div class="notescontainer">
+                    <label>
+                        Name: <input type="text" id="title" required>
+                    </label>
+                    <label>
+                        Description: <input type="text" id="comment" required>
+                    </label>
+                    </div>
+                    <span class="error" id="errorMsg"></span><br>
+                    <button type="submit" id = "addBtn" onclick="add(event)">Save</button>
+                    <button type="button" id="cancelBtn" onclick="closeBox()">Cancel</button>
+                </form>
+            </div>
+            <div id="noteHERE"></div>
+        </div>
+
+        <div id="bookMark">BOOKMARKED CASES
+            <div id="pin"></div>
+        </div>
+
+    </div>
+
+    <script src="casefiles.js"></script>
+        <h4 class="copyright">
+        &copy; <span id="year"></span> Geanne Aga. Maggie Velasco. All rights reserved.
+        </h4>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </body>
+</html>
