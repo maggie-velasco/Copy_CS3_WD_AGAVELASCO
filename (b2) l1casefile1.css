@@ -1,0 +1,240 @@
+/*navigation bar*/
+ul
+{
+  list-style-type: none;
+  margin: clamp(0.75rem, 2vw, 1.5rem);
+  padding: clamp(0.6rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: clamp(0.6rem, 3vw, 0.7rem);
+  position: fixed; /* always stays on top */
+  top: clamp(0.75rem, 2vw, 1.25rem);
+  left: clamp(0.75rem, 2vw, 1.25rem);
+  margin-right:2.5rem;
+  border-radius: 3rem;
+  width: max-content;
+  max-width: 90vw;
+  z-index: 9999;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  z-index:10;
+}
+
+li a 
+{
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  text-decoration: none;
+  color: rgb(26, 48, 78);
+  font-family: garamond, serif;
+  font-weight: bold;
+  padding: clamp(0.4rem, 1vw, 0.6rem)
+           clamp(0.6rem, 2vw, 0.9rem);
+  border-radius: 2rem;
+  transition: background-color .5s;
+
+  position: relative;
+  z-index: 10000;
+}
+
+li a:hover 
+{
+  background-color: rgb(26, 48, 78);
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+    ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        left: clamp(0.75rem, 2vw, 1.25rem);
+        transform: none;
+    }
+}
+
+.platypus
+{
+    position: fixed;
+    top: clamp(0.75rem, 2vw, 1.25rem);
+    right: clamp(0.75rem, 2vw, 1.25rem);
+    width: clamp(6rem, 15vw, 12.5rem);
+    z-index: 9999; 
+    pointer-events: none;
+}
+
+@media(max-width:480px){
+  .platypus{
+    width:20%;
+    top:0.5rem;
+  }
+}
+
+/*animation*/
+.content > * 
+{
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn 
+{
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*background adjustments*/
+html 
+{
+    background-color: rgb(0, 0, 0);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position-y: -280px;
+    margin: 0;
+    padding: 0;
+}
+
+body::before 
+{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/*content*/
+.content {
+    text-align: center;
+    font-family: "Copperplate", "Copperplate Gothic Light";
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin: 2rem;
+    width: 95%;
+    max-width: 100%;
+    margin-top: 4rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: relative;
+    z-index: 1;
+    padding: 1.25rem;
+    border-radius: .94rem;
+}
+
+.level1
+{
+    margin: auto;
+    padding: 3rem;
+    background-color: rgb(57, 84, 120);
+    border-radius: .63rem;
+    color:rgb(255, 255, 255);
+    width: 95%;
+    max-width: 98%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border: 0.125rem dashed #ffffff;
+}
+
+.content h1 {
+    font-family: "Copperplate", "Copperplate Gothic Light";
+    color: #ffffff;                        
+}
+
+h4
+{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 90%;
+        margin: clamp(4rem, 8.5vw, 9rem) auto;
+    }
+}
+
+.copyright {
+  text-align: center;
+}
+
+p
+{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  text-align: center;
+}
+
+button
+{
+  width: 90%;
+  max-width:60rem;
+  height:auto;
+  box-sizing:border-box;
+  border:3px solid;
+  font-family: 'Courier New', Courier, monospace;
+  color:rgb(26, 48, 78);
+  background-color:#ffffff;
+  border-radius: 1rem;
+  border-color: rgb(26, 48, 78);
+  margin: 1rem;
+  border: 5px solid;
+  font-size: 1.5rem;
+  flex-direction:column;
+}
+
+button:hover
+{
+  color:rgb(255, 255, 255);
+  background-color:rgb(26, 48, 78);
+  border-radius: 1rem;
+  border-color: rgb(255, 255, 255);
+  margin: 1rem;
+  border: 5px solid;
+}
+
+.interaction
+{
+  color:rgb(0, 0, 0);
+  background-color:rgb(255, 255, 255);
+  border-radius: 1rem;
+  border-color: rgb(0, 0, 0);
+  margin: 1rem;
+  border: 5px solid;
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 90%;
+  max-width: 60rem;
+  height: auto;
+  min-height: 7.5rem;
+  box-sizing: border-box;
+  border: 3px solid;
+}
+
+.interaction:hover
+{
+  color:rgb(255, 255, 255);
+  background-color:#000000;
+  border-color: rgb(255, 255, 255);
+  border: 3px solid;
+}
+
+#mute-button {
+  position: fixed;
+  bottom: clamp(0.75rem, 2vw, 1.25rem);
+  left: clamp(0.75rem, 2vw, 1.25rem);
+  background-color: rgb(255, 255, 255);
+  border: none;
+  margin: clamp(2rem, 1vw, 1rem);
+  border-radius: 50%;
+  width: clamp(2.5rem, 5vw, 3.5rem);
+  height: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  cursor: pointer;
+  z-index: 9999;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
